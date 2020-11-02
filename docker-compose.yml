@@ -10,3 +10,4 @@ services:
       - GOOGLE_AUTHENTICATOR_ENABLE=true
     ports: 
       - "2222:22"
+

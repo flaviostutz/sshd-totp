@@ -17,7 +17,7 @@ if [ ! -f /done-sshd ]; then
         cp /sshd /etc/pam.d/sshd
         echo "Creating a new key for Google Authenticator TOTP authentication..."
         echo ">>>>COPY THE LINK BELOW AND PASTE IT TO A BROWSER IN ORDER TO VIEW THE QRCODE (DON'T CLICK ON THE LINK BECAUSE IT WON'T WORK)<<<<"
-        google-authenticator -t -d -f -r 5 -R 30 -w 3
+        google-authenticator -t -d -f -r 5 -R 30 -w 3 -C -Q UTF8 -e 5
     fi
 
 fi

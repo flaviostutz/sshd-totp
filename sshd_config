@@ -56,7 +56,7 @@ PasswordAuthentication yes
 #PermitEmptyPasswords no
 
 # Change to no to disable s/key passwords
-#ChallengeResponseAuthentication yes
+ChallengeResponseAuthentication yes
 
 # Kerberos options
 #KerberosAuthentication no
@@ -78,6 +78,8 @@ PasswordAuthentication yes
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
+
+AuthenticationMethods keyboard-interactive
 
 #AllowAgentForwarding yes
 # Feel free to re-enable these if your use case requires them.

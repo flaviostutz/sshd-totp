@@ -1,6 +1,6 @@
 FROM alpine:3.12.1
 
-RUN apk add openssh openssh-server-pam bash google-authenticator
+RUN apk add openssh openssh-server-pam bash google-authenticator libqrencode
 
 ENV SSH_ROOT_PASSWORD ''
 ENV GOOGLE_AUTHENTICATOR_ENABLE false
@@ -8,5 +8,7 @@ ENV GOOGLE_AUTHENTICATOR_ENABLE false
 ADD startup.sh /
 ADD sshd_config /etc/ssh/
 ADD /sshd /
+
+VOLUME [ "/root" ]
 
 ENTRYPOINT [ "/startup.sh" ]

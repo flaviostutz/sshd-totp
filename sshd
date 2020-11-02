@@ -1,5 +1,7 @@
-account		include				base-account
+# PAM configuration for the Secure Shell service
 
-auth		required			pam_env.so
-auth		required			pam_nologin.so	successok
-auth		include				google-authenticator
+account		required	pam_unix.so
+auth	    required    pam_unix.so nullok_secure
+auth        required    pam_google_authenticator.so
+session		required	pam_unix.so
+-session	optional	pam_elogind.so

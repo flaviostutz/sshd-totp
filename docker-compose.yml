@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  sshd-totp:
+    build: .
+    image: flaviostutz/sshd-totp
+    environment:
+      - SSH_ROOT_PASSWORD=admin123
+      - GOOGLE_AUTHENTICATOR_ENABLE=true
+    ports: 
+      - "2222:22"

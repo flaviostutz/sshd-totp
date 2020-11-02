@@ -10,5 +10,6 @@ ADD sshd_config /etc/ssh/
 ADD /sshd /
 
 VOLUME [ "/root" ]
+EXPOSE 2222
 
 ENTRYPOINT [ "/startup.sh" ]

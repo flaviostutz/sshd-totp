@@ -9,5 +9,5 @@ services:
       - SSH_ROOT_PASSWORD=admin123
       - GOOGLE_AUTHENTICATOR_ENABLE=true
     ports: 
-      - "2222:22"
+      - "2222:2222"
 
